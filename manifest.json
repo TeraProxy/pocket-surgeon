@@ -1,0 +1,18 @@
+{
+	"files": {
+		"id.json": "170b54a8b81e6b8e4dcf240e7e6b9c00eaa9fad63f19ab3bd8c988a4074f5638",
+		"index.js": "a5e2def03a34e3b82b616a31ebfe878c2843e4459da99211401b1cdb30e6c440",
+		"LICENSE": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+		"module.json": "208ac233cb3ef5354a288a2761c167cba959d0b9c04cb239ec644ae8bfe1515a",
+		"README.md": "dcecde96c92d5747e4e23c301d36f93e568b29b226057244ea46774b64d7bfbe",
+		"surgeries.json": {
+			"overwrite": false,
+			"hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+		}
+	},
+	"defs": {
+		"S_ABNORMALITY_BEGIN": 2,
+		"S_ABNORMALITY_END": 1,
+		"S_CHANGE_VOICE_USE_QAC": 1
+	}
+}
