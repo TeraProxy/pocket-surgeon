@@ -35,7 +35,7 @@ The following commands are supported:
 * surgeon reset - resets your changes, relog afterwards to get your original voice back
 * surgeon [effect] - toggle an effect on and off, see below for valid effects
 
-Any other input, starting with "cosplay", will return a summary of above commands in the chat.
+Any other input, starting with "surgeon", will return a summary of above commands in the chat.
 
 ## Effects
 * murder - Murderous Intent (outfit turns black, red eyes)
