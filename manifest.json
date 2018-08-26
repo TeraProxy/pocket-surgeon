@@ -1,17 +1,17 @@
 {
 	"files": {
-		"id.json": "170b54a8b81e6b8e4dcf240e7e6b9c00eaa9fad63f19ab3bd8c988a4074f5638",
-		"index.js": "a5e2def03a34e3b82b616a31ebfe878c2843e4459da99211401b1cdb30e6c440",
 		"LICENSE": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
-		"module.json": "208ac233cb3ef5354a288a2761c167cba959d0b9c04cb239ec644ae8bfe1515a",
-		"README.md": "65dbcd7ff42bf88f94585b611adcff1f3ed7ad10e86d846f2e2e71a9fb93fd59",
+		"README.md": "fb8818c66531807a6b54715bb527c4734d99fb11c690d18048e2a1aebeeb1544",
+		"id.json": "9d33bc094191e25b48bb88839f638f6272aae5bff8f30f9dce344cc96cab8a75",
+		"index.js": "0b8d72eed5f9ca139fe52666d45106f0f2b128e07cfbe15e76c5590ef8f7b894",
+		"module.json": "aa5990d3a6cc9615f5f50ac016e0a3f2a549f80597b5cb2a92b941fdd8cc000f",
 		"surgeries.json": {
 			"overwrite": false,
-			"hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+			"hash": "5b992e11c50d4f51646a0b386987559da082d2d164ae2892f25a8ca82b594e97"
 		}
 	},
 	"defs": {
-		"S_ABNORMALITY_BEGIN": 2,
+		"S_ABNORMALITY_BEGIN": [2,"raw"],
 		"S_ABNORMALITY_END": 1,
 		"S_CHANGE_VOICE_USE_QAC": 1
 	}

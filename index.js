@@ -1,18 +1,14 @@
-// Version 1.0
+// Version 1.1
 
 'use strict'
 
-const Command = require('command'),
-	path = require('path'),
+const path = require('path'),
 	fs = require('fs'),
-	GameState = require('tera-game-state'),
 	id = require('./id')
 
-module.exports = function pocketsurgeon(dispatch) {
-	const command = Command(dispatch),
-		game = GameState(dispatch)
+module.exports = function pocketsurgeon(mod) {
 
-	let fakeAbnormalities = null,
+	let fakeAbnormalities = {},
 		voice = -1
 
 	// ################### //
@@ -30,9 +26,9 @@ module.exports = function pocketsurgeon(dispatch) {
 	}
 
 	function presetUpdate() {
-		if(!presets[game.me.name]) presets[game.me.name] = {}
-		if(fakeAbnormalities) presets[game.me.name].abnormalities = fakeAbnormalities
-		presets[game.me.name].voice = voice
+		if(!presets[mod.game.me.name]) presets[mod.game.me.name] = {}
+		if(fakeAbnormalities) presets[mod.game.me.name].abnormalities = fakeAbnormalities
+		presets[mod.game.me.name].voice = voice
 
 		clearTimeout(presetTimeout)
 		presetTimeout = setTimeout(presetSave, 1000)
@@ -53,15 +49,15 @@ module.exports = function pocketsurgeon(dispatch) {
 	// ### Hooks ### //
 	// ############# //
 
-	game.on('enter_game', () => {
-		if(presets[game.me.name]) {
-			dispatch.hookOnce('S_ABNORMALITY_BEGIN', 'raw', () => {
-				fakeAbnormalities = presets[game.me.name].abnormalities
+	mod.game.on('enter_game', () => {
+		if(presets[mod.game.me.name]) {
+			mod.hookOnce('S_ABNORMALITY_BEGIN', 'raw', () => {
+				fakeAbnormalities = presets[mod.game.me.name].abnormalities
 
 				restoreEffect()
 
-				if(presets[game.me.name].voice > -1) {
-					voice = presets[game.me.name].voice
+				if(presets[mod.game.me.name].voice > -1) {
+					voice = presets[mod.game.me.name].voice
 					voiceChange(voice)
 				}
 			})
@@ -74,11 +70,11 @@ module.exports = function pocketsurgeon(dispatch) {
 
 	function voiceChange(pitch) {
 		if(pitch < 0) voice = 0
-		else if(game.me.gender == 'male' && pitch > 5) voice = 5
-		else if(game.me.gender == 'female' && pitch > 4) voice = 4 // females have 1 voice less
+		else if(mod.game.me.gender == 'male' && pitch > 5) voice = 5
+		else if(mod.game.me.gender == 'female' && pitch > 4) voice = 4 // females have 1 voice less
 		else voice = pitch
 
-		dispatch.toClient('S_CHANGE_VOICE_USE_QAC', 1, {
+		mod.toClient('S_CHANGE_VOICE_USE_QAC', 1, {
 			voice: voice
 		})
 	}
@@ -99,9 +95,9 @@ module.exports = function pocketsurgeon(dispatch) {
 	function applyAppearanceChange(id, stacks) {
 		fakeAbnormalities[id] = stacks
 
-		dispatch.toClient('S_ABNORMALITY_BEGIN', 2, {
-			target: game.me.gameId,
-			source: game.me.gameId,
+		mod.toClient('S_ABNORMALITY_BEGIN', 2, {
+			target: mod.game.me.gameId,
+			source: mod.game.me.gameId,
 			id: id,
 			duration: 864000000,
 			unk: 0,
@@ -113,8 +109,8 @@ module.exports = function pocketsurgeon(dispatch) {
 	function removeAppearanceChange(id, stacks) {
 		delete fakeAbnormalities[id]
 
-		dispatch.toClient('S_ABNORMALITY_END', 1, {
-			target: game.me.gameId,
+		mod.toClient('S_ABNORMALITY_END', 1, {
+			target: mod.game.me.gameId,
 			id: id
 		})
 	}
@@ -123,7 +119,7 @@ module.exports = function pocketsurgeon(dispatch) {
 	// ### Commands ### //
 	// ################ //
 
-	command.add('surgeon', (cmd, value) => {
+	mod.command.add('surgeon', (cmd, value) => {
 		switch (cmd) {
 			case 'head':
 			case 'murder':
@@ -163,21 +159,21 @@ module.exports = function pocketsurgeon(dispatch) {
 					else applyAppearanceChange(id[cmd], Number(value) + 4)
 					presetUpdate()
 				}
-				else command.message('Please enter a value, e.g. "surgeon ' + cmd + ' -3"')
+				else mod.command.message('Please enter a value, e.g. "surgeon ' + cmd + ' -3"')
 				break
 			case 'voice':
 				if(value) {
 					voiceChange(Number(value))
 					presetUpdate()
 				}
-				else command.message('Please enter a value, e.g. "surgeon voice 1"')
+				else mod.command.message('Please enter a value, e.g. "surgeon voice 1"')
 				break
 			case 'reset':
 				resetMe()
 				presetUpdate()
 				break
 			default:
-				command.message('Commands:\n'
+				mod.command.message('Commands:\n'
 								+ ' "surgeon height [x]" (changes your height to x, default is 0, e.g. "surgeon height -3"),\n'
 								+ ' "surgeon chest [x]" (changes your chest to x, default is 0, e.g. "surgeon chest -3"),\n'
 								+ ' "surgeon thighs [x]" (changes your thighs to x, default is 0, e.g. "surgeon thighs -3"),\n'
