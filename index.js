@@ -1,4 +1,4 @@
-// Version 1.1
+// Version 1.0.2
 
 'use strict'
 
@@ -95,14 +95,15 @@ module.exports = function pocketsurgeon(mod) {
 	function applyAppearanceChange(id, stacks) {
 		fakeAbnormalities[id] = stacks
 
-		mod.toClient('S_ABNORMALITY_BEGIN', 2, {
+		mod.toClient('S_ABNORMALITY_BEGIN', 3, {
 			target: mod.game.me.gameId,
 			source: mod.game.me.gameId,
 			id: id,
 			duration: 864000000,
 			unk: 0,
 			stacks: stacks,
-			unk2: 0
+			unk2: 0,
+			unk3: 0
 		})
 	}
 
