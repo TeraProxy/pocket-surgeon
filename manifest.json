@@ -1,9 +1,9 @@
 {
 	"files": {
 		"LICENSE": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
-		"README.md": "4ac47987990d543f89f0d708cd50852e726b64b21e503d7c9f0c458157309d3b",
+		"README.md": "b8fa353c91f41b24c927231d32d2a526266e945160e1662bb4bcd6f732d2c968",
 		"id.json": "9d33bc094191e25b48bb88839f638f6272aae5bff8f30f9dce344cc96cab8a75",
-		"index.js": "9a7c7506d930fae70ed6d06aeb59340efa3a845d0595bd844615a4208ea69b13",
+		"index.js": "723ef2302afdf5d240d92a2970d77e99f2925c13e34b853df3f7472e3422e715",
 		"module.json": "56eb9402387bd7142eed52f7b9fbfbf980a0424f3c55fca98ae7ebc0b2e23fe5",
 		"surgeries.json": {
 			"overwrite": false,
@@ -11,7 +11,7 @@
 		}
 	},
 	"defs": {
-		"S_ABNORMALITY_BEGIN": [3,"raw"],
+		"S_ABNORMALITY_BEGIN": [3,"raw",2],
 		"S_ABNORMALITY_END": 1,
 		"S_CHANGE_VOICE_USE_QAC": 1
 	}

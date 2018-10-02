@@ -67,6 +67,8 @@ Thanks to Pentagon for some of the abnormality IDs -> https://github.com/codeago
 ## Changelog
 <details>
 
+### 1.0.3
+* [*] Support for patch versions < 75
 ### 1.0.2
 * [~] Definition update
 ### 1.0.1
