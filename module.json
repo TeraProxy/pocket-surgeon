@@ -1,8 +1,16 @@
 {
     "disableAutoUpdate": false,
+    "name": "pocket-surgeon",
+    "author": "TeraProxy",
+    "description": "A tera-proxy module able to change visual effects and voice of your character (client-side).",
+    "version": "1.0.3",
+    "donationUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=A3KBZUCSEQ5RJ",
     "options": {
-        "niceName": "Pocket Surgeon"
+        "niceName": "Surgeon"
     },
     "servers": ["https://raw.githubusercontent.com/TeraProxy/pocket-surgeon/master/"],
-    "supportUrl": "https://github.com/TeraProxy/pocket-surgeon/issues"
+    "supportUrl": "https://github.com/TeraProxy/pocket-surgeon/issues",
+    "dependencies": {
+        "tera-game-state": "https://raw.githubusercontent.com/caali-hackerman/tera-game-state/master/module.json"
+    }
 }
