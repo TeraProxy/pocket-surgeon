@@ -95,7 +95,7 @@ module.exports = function pocketsurgeon(mod) {
 	function applyAppearanceChange(id, stacks) {
 		fakeAbnormalities[id] = stacks
 
-		if(mod.base.majorPatchVersion >= 75) {
+		if(mod.majorPatchVersion >= 75) {
 			mod.toClient('S_ABNORMALITY_BEGIN', 3, {
 				target: mod.game.me.gameId,
 				source: mod.game.me.gameId,
