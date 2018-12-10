@@ -1,5 +1,3 @@
-// Version 1.0.3
-
 'use strict'
 
 const path = require('path'),
@@ -95,29 +93,16 @@ module.exports = function pocketsurgeon(mod) {
 	function applyAppearanceChange(id, stacks) {
 		fakeAbnormalities[id] = stacks
 
-		if(mod.majorPatchVersion >= 75) {
-			mod.toClient('S_ABNORMALITY_BEGIN', 3, {
-				target: mod.game.me.gameId,
-				source: mod.game.me.gameId,
-				id: id,
-				duration: 864000000, // 10 days
-				unk: 0,
-				stacks: stacks,
-				unk2: 0,
-				unk3: 0
-			})
-		}
-		else {
-			mod.toClient('S_ABNORMALITY_BEGIN', 2, {
-				target: mod.game.me.gameId,
-				source: mod.game.me.gameId,
-				id: id,
-				duration: 864000000, // 10 days
-				unk: 0,
-				stacks: stacks,
-				unk2: 0
-			})
-		}
+		mod.toClient('S_ABNORMALITY_BEGIN', 3, {
+			target: mod.game.me.gameId,
+			source: mod.game.me.gameId,
+			id: id,
+			duration: 864000000, // 10 days
+			unk: 0,
+			stacks: stacks,
+			unk2: 0,
+			unk3: 0
+		})
 	}
 
 	function removeAppearanceChange(id, stacks) {
@@ -166,6 +151,7 @@ module.exports = function pocketsurgeon(mod) {
 				presetUpdate()
 				break
 			case 'height':
+			case 'size':
 			case 'chest':
 			case 'thighs':
 				if(value) {

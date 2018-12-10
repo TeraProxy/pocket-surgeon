@@ -1,7 +1,7 @@
 ##### :heavy_exclamation_mark: Status :heavy_exclamation_mark:
 Should work on all regions as long as the opcodes are mapped. Thanks to EME's recent unjustified DMCA actions against developers, opcodes for NA are no longer mapped.
 
-##### :heavy_exclamation_mark: Installation for Caali's tera-proxy :heavy_exclamation_mark:
+##### :heavy_exclamation_mark: Installation :heavy_exclamation_mark:
 1) Download pocket-surgeon: https://github.com/TeraProxy/pocket-surgeon/archive/master.zip
 2) Extract the contents of the zip file into "\tera-proxy\bin\node_modules\"
 3) Done! (the module will auto-update when a new version is released)
@@ -20,12 +20,13 @@ While in game, open a proxy chat session by typing "/proxy" or "/8" in chat and 
 This serves as the script's command interface.  
 The following commands are supported:  
 
-* surgeon height [x] - changes your height to x, default is 0, e.g. "surgeon height -3"
-* surgeon chest [x] - changes your chest to x, default is 0, e.g. "surgeon chest -3"
-* surgeon thighs [x] - changes your thighs to x, default is 0, e.g. "surgeon thighs -3"
-* surgeon voice [0-5] - changes your voice pitch, e.g. "surgeon voice 1"
-* surgeon reset - resets your changes, relog afterwards to get your original voice back
-* surgeon [effect] - toggle an effect on and off, see below for valid effects
+* **surgeon height [x]** - changes your height to x, default is 0, e.g. "surgeon height -3"
+* **surgeon size [x]** - changes your size to x, default is 0, e.g. "surgeon size -3"
+* **surgeon chest [x]** - changes your chest to x, default is 0, e.g. "surgeon chest -3"
+* **surgeon thighs [x]** - changes your thighs to x, default is 0, e.g. "surgeon thighs -3"
+* **surgeon voice [0-5]** - changes your voice pitch, e.g. "surgeon voice 1"
+* **surgeon reset** - resets your changes, relog afterwards to get your original voice back
+* **surgeon [effect]** - toggle an effect on and off, see below for valid effects
 
 Any other input, starting with "surgeon", will return a summary of above commands in the chat.
 
@@ -67,6 +68,10 @@ Thanks to Pentagon for some of the abnormality IDs -> https://github.com/codeago
 ## Changelog
 <details>
 
+### 1.0.4
+* [*] Fixed "height" actually being "size"
+* [+] Added command "surgeon size"
+* [-] Removed support for patch versions < 75
 ### 1.0.3
 * [*] Support for patch versions < 75
 ### 1.0.2
