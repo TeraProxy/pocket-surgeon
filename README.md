@@ -1,11 +1,13 @@
 ##### :heavy_exclamation_mark: Status :heavy_exclamation_mark:
-Should work on all regions as long as the opcodes are mapped. Thanks to EME's recent unjustified DMCA actions against developers, opcodes for NA are no longer mapped.
+Should work on all regions as long as the opcodes are mapped. Works on Caali's and Pinkie Pie's tera-proxy.
 
 ##### :heavy_exclamation_mark: Installation :heavy_exclamation_mark:
 1) Download pocket-surgeon: https://github.com/TeraProxy/pocket-surgeon/archive/master.zip
-2) Extract the contents of the zip file into "\tera-proxy\bin\node_modules\"
-3) Done! (the module will auto-update when a new version is released)
-
+2) Extract the contents of the zip file into "\tera-proxy\mods\"
+3) Done! (the module will auto-update on Caali's proxy when a new version is released)
+  
+Users of Pinkie's proxy also need to install tera-game-state: https://github.com/caali-hackerman/tera-game-state/archive/master.zip  
+  
 If you enjoy my work and wish to support future development, feel free to drop me a small donation: [![Donate](https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=A3KBZUCSEQ5RJ)
 
 # pocket-surgeon
