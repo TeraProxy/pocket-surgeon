@@ -70,6 +70,8 @@ Thanks to Pentagon for some of the abnormality IDs -> https://github.com/codeago
 ## Changelog
 <details>
 
+### 1.0.5
+* [~] Minor definition update
 ### 1.0.4
 * [*] Fixed "height" actually being "size"
 * [+] Added command "surgeon size"

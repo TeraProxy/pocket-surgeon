@@ -1,18 +1,18 @@
 {
-	"files": {
-		"LICENSE": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
-		"README.md": "2231d425e7014da57b82520359ffe9b681243550924c47a5be77cc586535274c",
-		"id.json": "bdc6df0fcd86a195652db1e8cc10d34897f981554e4ffc77a48ddd0ef6926dae",
-		"index.js": "02678454aef9ed2a012d7d3b15c88f40d4f0c853ad4d6650ef43fe23ccaaed7c",
-		"module.json": "ca43367dea5ba7c438536f1049d821e151c3f0935ca58977bede153fd37c2fdd",
-		"surgeries.json": {
-			"overwrite": false,
-			"hash": "d6417858c0d0b6b1b54d76bebf60aae6e278e4f433eea5f98e9cf051a756b69a"
-		}
-	},
-	"defs": {
-		"S_ABNORMALITY_BEGIN": ["raw",3],
-		"S_ABNORMALITY_END": 1,
-		"S_CHANGE_VOICE_USE_QAC": 1
-	}
+    "files": {
+        "LICENSE": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+        "README.md": "dcf9afd635fab3306227613b14fd6573c13421927a2350d99162546ea45c3c60",
+        "id.json": "bdc6df0fcd86a195652db1e8cc10d34897f981554e4ffc77a48ddd0ef6926dae",
+        "index.js": "d928ae293e764d830a4b114ca5a2b75b774aa47d45604670a30b10cdc9c13ea7",
+        "module.json": "a025c49e2b83bb3999fa8aaa944b13ca0febfc5b2411fb0c23b9e70f5c85741d",
+        "surgeries.json": {
+            "overwrite": false,
+            "hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+    },
+    "defs": {
+        "S_ABNORMALITY_BEGIN": ["raw",3],
+        "S_ABNORMALITY_END": 1,
+        "S_CHANGE_VOICE_USE_QAC": 1
+    }
 }

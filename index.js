@@ -98,9 +98,8 @@ module.exports = function pocketsurgeon(mod) {
 			source: mod.game.me.gameId,
 			id: id,
 			duration: 864000000, // 10 days
-			unk: 0,
 			stacks: stacks,
-			unk2: 0,
+			hitCylinderId: 0,
 			unk3: 0
 		})
 	}
